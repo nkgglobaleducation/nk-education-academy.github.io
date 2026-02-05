@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NK Education Academy | ECE & EEE Tuitions</title>
+  <meta name="description" content="NK Education Academy offers concept-based and exam-oriented coaching for ECE & EEE Diploma and B.E/B.Tech students. Online and offline classes in Vijayawada." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f2a1d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('NK Academy Google cover.png');
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #d4af37;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+    .about, .modes {
+      background-color: #123524;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+    ul {
+      columns: 2;
+      list-style: square;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .contact {
+      background-color: #0b1f15;
+      text-align: center;
+      border-top: 2px solid #d4af37;
+    }
+    .contact p {
+      font-size: 18px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background-color: #d4af37;
+      color: #0f2a1d;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #000;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      ul {
+        columns: 1;
+      }
+      header h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="NK Academy.png" alt="NK Education Academy Logo" width="120" />
+  <h1>NK Education Academy</h1>
+  <p>ECE & EEE Tuitions – Diploma & B.E / B.Tech<br />
+  Concept-Based & Exam-Oriented Coaching</p>
+</header>
+
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    NK Education Academy focuses on strong conceptual understanding, numerical problem solving, and exam-oriented preparation. Our teaching approach helps students confidently face semester exams and competitive examinations.
+  </p>
+</section>
+
+<section class="modes">
+  <h2>Class Modes</h2>
+  <p>
+    ✔ Online Classes (India-wide)<br />
+    ✔ Offline Classes (Vijayawada & nearby areas only)
+  </p>
+</section>
+
+<section>
+  <h2>Subjects Offered (ECE & EEE)</h2>
+  <ul>
+    <li>Engineering Physics</li>
+    <li>Network Theory / Electric Circuits</li>
+    <li>Signals & Systems</li>
+    <li>Control Systems</li>
+    <li>Analog & Digital Electronics</li>
+    <li>Electronic Devices & Circuits (EDC)</li>
+    <li>Electrical Machines</li>
+    <li>Power Systems</li>
+    <li>Power Electronics</li>
+    <li>Measurements & Instrumentation</li>
+    <li>Electromagnetic Fields (EMFT)</li>
+    <li>Communication Systems</li>
+    <li>Microprocessors & Computer Fundamentals</li>
+    <li>Basic Electrical Engineering</li>
+  </ul>
+</section>
+
+<section class="about">
+  <h2>Additional Coaching</h2>
+  <p>
+    Tuitions for Class XI, XII, and Intermediate Physics are also available.
+  </p>
+</section>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>
+    📞 Call / WhatsApp: <strong>8297040335</strong>
+  </p>
+  <a class="btn" href="https://wa.me/918297040335" target="_blank">Enquire on WhatsApp</a>
+</section>
+
+<footer>
+  © 2026 NK Education Academy | All Rights Reserved
+</footer>
+
+</body>
+</html>
