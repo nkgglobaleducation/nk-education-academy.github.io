@@ -1,117 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NK Education Academy</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
+
+/* RESET */
 body {
-    font-family: Arial;
-    margin:0;
-    background:#f5fff5;
-    text-align:center;
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background:#f6fff6;
+color:#222;
 }
 
+/* NAVBAR */
+.nav {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav h2 {
+color:#0a5c2f;
+margin:0;
+}
+
+.nav a {
+text-decoration:none;
+color:#0a5c2f;
+margin-left:15px;
+font-weight:bold;
+}
+
+/* HERO */
 .hero {
-    background: linear-gradient(#0a5c2f,#2ecc71);
-    color:white;
-    padding:20px;
+background: linear-gradient(135deg,#0a5c2f,#2ecc71);
+color:white;
+text-align:center;
+padding:60px 20px;
 }
 
 .hero h1 {
-    font-size:38px;
+font-size:44px;
+margin:0;
 }
 
-.poster {
-    width:95%;
-    margin:15px auto;
-    border-radius:10px;
-    box-shadow:0 0 15px rgba(0,0,0,0.2);
-}
-
-.section {
-    background:white;
-    margin:15px;
-    padding:15px;
-    border-radius:10px;
+.hero p {
+font-size:18px;
+margin:10px 0;
 }
 
 .btn {
-    background:#25D366;
-    color:white;
-    padding:12px 20px;
-    text-decoration:none;
-    border-radius:5px;
-    display:inline-block;
-    margin-top:10px;
+background:#25D366;
+padding:14px 24px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+display:inline-block;
+margin-top:15px;
 }
 
-input {
-    padding:10px;
-    width:90%;
-    margin:5px;
+/* SECTIONS */
+.section {
+padding:30px 20px;
+max-width:1000px;
+margin:auto;
 }
+
+.section h2 {
+color:#0a5c2f;
+margin-bottom:15px;
+}
+
+/* CARDS */
+.grid {
+display:grid;
+gap:20px;
+}
+
+.card {
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 3px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+color:#0a5c2f;
+}
+
+/* POSTER */
+.poster {
+width:100%;
+border-radius:12px;
+margin-top:20px;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+background:#eaffea;
+padding:20px;
+border-radius:10px;
+}
+
+/* CONTACT */
+.contact {
+text-align:center;
+}
+
+/* FLOAT BUTTON */
+.float {
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+}
+
+/* RESPONSIVE */
+@media(min-width:768px){
+.grid {
+grid-template-columns:1fr 1fr;
+}
+}
+
 </style>
-
 </head>
 
 <body>
 
-<div class="hero">
-<h1>NK EDUCATION ACADEMY</h1>
-<p>E-CET | GATE | ECE & EEE | IIT-JEE | NEET | EAPCET</p>
-
-<a class="btn" href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy">WhatsApp Now</a>
+<!-- NAVBAR -->
+<div class="nav">
+<h2>NK Academy</h2>
+<div>
+<a href="#">Home</a>
+<a href="#programs">Programs</a>
+<a href="#contact">Contact</a>
+</div>
 </div>
 
-<!-- YOUR POSTER -->
-<img src="poster.png" class="poster">
+<!-- HERO -->
+<div class="hero">
+<h1>NK EDUCATION ACADEMY</h1>
 
-<!-- ENQUIRY FORM -->
+<p><b>E-CET | GATE | ECE & EEE Coaching</b></p>
+<p><b>Physics (IIT-JEE | NEET | EAPCET)</b></p>
+<p>Diploma | B Tech – B.E | Intermediate</p>
+
+<a class="btn" href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy">📲 Enquire Now</a>
+</div>
+
+<!-- POSTER -->
 <div class="section">
-<h2>Quick Enquiry</h2>
+<img src="poster.png" class="poster">
+</div>
 
-<input id="name" placeholder="Student Name"><br>
-<input id="course" placeholder="Course"><br>
-<input id="subject" placeholder="Subject"><br>
+<!-- PROGRAMS -->
+<div class="section" id="programs">
+<h2>Our Programs</h2>
 
-<button onclick="sendMsg()">Send</button>
+<div class="grid">
 
-<script>
-function sendMsg(){
-let name = document.getElementById("name").value;
-let course = document.getElementById("course").value;
-let subject = document.getElementById("subject").value;
+<div class="card">
+<h3>Engineering Coaching</h3>
+<p>E-CET | GATE Preparation</p>
+<p>Diploma | B.Tech | B.E Subjects</p>
+<p>All Core ECE & EEE Subjects Covered</p>
+</div>
 
-let url = "https://wa.me/918297040335?text="
-+ "Hello NK Education Academy,%0A"
-+ "Name: "+name+"%0A"
-+ "Course: "+course+"%0A"
-+ "Subject: "+subject;
+<div class="card">
+<h3>Project Guidance</h3>
+<p>IEEE Projects Support</p>
+<p>Design, Simulation & Viva Preparation</p>
+</div>
 
-window.open(url,'_blank');
-}
-</script>
+<div class="card">
+<h3>Physics Coaching</h3>
+<p>IIT-JEE | NEET | EAPCET</p>
+<p>Intermediate Physics</p>
+</div>
+
+<div class="card">
+<h3>Government Job Preparation</h3>
+<p>SSC | PSU | Railways</p>
+<p>Career Guidance & Strategy</p>
+</div>
+
+</div>
+</div>
+
+<!-- WHY US -->
+<div class="section">
+<h2>Why Choose Us</h2>
+
+<div class="grid">
+<div class="card">✔ Concept-Based Teaching</div>
+<div class="card">✔ Numerical Problem Solving</div>
+<div class="card">✔ Flexible Batches</div>
+<div class="card">✔ Individual Training</div>
+</div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="section">
+<h2>Student Results</h2>
+
+<div class="testimonial">
+<p><b>100% Pass in Tuition Subjects</b></p>
+<p>Strong Results in E-CET, GATE & Semester Exams</p>
+</div>
+
 </div>
 
 <!-- CONTACT -->
-<div class="section">
-<h2>Contact</h2>
+<div class="section contact" id="contact">
+<h2>Contact Us</h2>
 
-<p>Pent-House (Upstairs), GSIT Computer Building,<br>
-Ajit Singh Nagar, Vijayawada</p>
+<p>
+Pent-House (Upstairs), GSIT Computer Building,<br>
+Near Flyover, Ajit Singh Nagar,<br>
+Vijayawada – 520015
+</p>
 
-<p><b>Call / WhatsApp: 8297040335</b></p>
+<p><b>📞 8297040335</b></p>
+
+<a class="btn" href="https://wa.me/918297040335">WhatsApp Now</a>
 
 </div>
 
-<!-- FLOATING BUTTON -->
-<a href="https://wa.me/918297040335"
-style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
-padding:15px;border-radius:50%;text-decoration:none;">
-📲
-</a>
+<!-- FLOAT -->
+<a href="https://wa.me/918297040335" class="float">📲</a>
 
 </body>
 </html>
