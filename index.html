@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NK Education Academy | ECE EEE Coaching | ECET GATE | Physics IIT-JEE NEET | Vijayawada</title>
+<meta name="description" content="NK Education Academy – Expert coaching for ECET, GATE, ECE & EEE subjects, Physics (IIT-JEE, NEET, EAPCET), Diploma & B.Tech tuitions. Located in Ajit Singh Nagar, Vijayawada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0b1f3a;
+    --navy-mid: #122d55;
+    --gold: #e8a020;
+    --gold-light: #f5c660;
+    --cream: #fdf6ec;
+    --white: #ffffff;
+    --text-muted: #7a8899;
+    --card-bg: #f5f8ff;
+    --border: #dde6f0;
+    --green: #1a9e5c;
+    --red: #c0392b;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(11,31,58,0.97);
+    backdrop-filter: blur(8px);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  }
+  .nav-brand {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.82);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a3d70 100%);
+    display: flex; align-items: center;
+    padding: 100px 5% 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(232,160,32,0.10) 0%, transparent 70%);
+  }
+  /* geometric accents */
+  #hero::after {
+    content: '';
+    position: absolute;
+    width: 420px; height: 420px;
+    border: 2px solid rgba(232,160,32,0.12);
+    border-radius: 50%;
+    top: -80px; right: -80px;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 720px;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(232,160,32,0.15);
+    border: 1px solid rgba(232,160,32,0.4);
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.12;
+    margin-bottom: 20px;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+  h1 span { color: var(--gold); }
+  .hero-sub {
+    color: rgba(255,255,255,0.72);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 36px;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-bottom: 40px;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+  .tag {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.16);
+    color: rgba(255,255,255,0.88);
+    padding: 6px 14px; border-radius: 20px;
+    font-size: 0.82rem; font-weight: 500;
+  }
+  .hero-buttons {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    animation: fadeUp 0.7s 0.4s ease both;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(232,160,32,0.35);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,160,32,0.45); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.06); }
+
+  /* hero stat strip */
+  .hero-stats {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: center;
+    padding: 20px 5%;
+    gap: 0;
+    animation: fadeUp 0.7s 0.5s ease both;
+  }
+  .stat-item {
+    flex: 1; text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.12);
+    padding: 8px 16px;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.76rem; color: rgba(255,255,255,0.6);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  /* ── SECTIONS SHARED ── */
+  section { padding: 72px 5%; }
+  .section-label {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .section-intro {
+    color: var(--text-muted);
+    font-size: 1rem; line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 48px;
+  }
+
+  /* ── PROGRAMS ── */
+  #programs { background: var(--cream); }
+  .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+  }
+  .program-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .program-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .program-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(11,31,58,0.1); border-color: var(--gold); }
+  .program-card:hover::before { opacity: 1; }
+  .prog-icon { font-size: 2rem; margin-bottom: 14px; }
+  .prog-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+  .prog-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
+  .prog-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .prog-tag { font-size: 0.72rem; padding: 3px 10px; border-radius: 12px; background: #eef3ff; color: var(--navy-mid); font-weight: 600; }
+
+  /* ── RESULTS ── */
+  #results { background: var(--white); }
+  .results-flex { display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start; }
+  .results-left { flex: 1; min-width: 260px; }
+  .results-right { flex: 1.2; min-width: 280px; }
+  .result-highlight {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: 16px; padding: 36px;
+    color: white; margin-bottom: 20px;
+    position: relative; overflow: hidden;
+  }
+  .result-highlight::after {
+    content: '🏆';
+    position: absolute; right: 20px; top: 20px;
+    font-size: 3rem; opacity: 0.15;
+  }
+  .result-big { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: var(--gold); }
+  .result-label { font-size: 1rem; font-weight: 600; margin-bottom: 6px; margin-top: 4px; }
+  .result-note { font-size: 0.83rem; opacity: 0.7; }
+  .checklist { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .checklist li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.93rem; line-height: 1.5; }
+  .check { color: var(--green); font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── FACULTY ── */
+  #faculty { background: var(--cream); }
+  .faculty-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px;
+    max-width: 620px;
+    display: flex; gap: 28px; align-items: flex-start;
+  }
+  .faculty-avatar {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; flex-shrink: 0;
+    border: 3px solid var(--gold);
+  }
+  .faculty-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+  .faculty-title { color: var(--gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+  .faculty-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── SCHEDULE / TIMING ── */
+  #schedule { background: var(--white); }
+  .timing-note {
+    background: #fff8ed;
+    border: 1px solid #f0d080;
+    border-radius: 10px;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    color: #7a5a10;
+    margin-bottom: 32px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .sched-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .sched-day { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+  .sched-time { color: var(--navy-mid); font-size: 0.85rem; font-weight: 600; }
+  .sched-open { color: var(--green); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-top: 4px; }
+  .sched-closed { color: var(--red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-top: 4px; }
+
+  /* ── ENQUIRY ── */
+  #enquiry { background: var(--navy); }
+  #enquiry h2 { color: var(--white); }
+  #enquiry .section-label { color: var(--gold-light); }
+  #enquiry .section-intro { color: rgba(255,255,255,0.65); }
+  .enquiry-wrap { display: flex; gap: 48px; flex-wrap: wrap; }
+  .enquiry-form { flex: 1; min-width: 280px; }
+  .enquiry-info { flex: 0.9; min-width: 260px; }
+  .form-group { margin-bottom: 18px; }
+  label { display: block; font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 6px; letter-spacing: 0.04em; text-transform: uppercase; }
+  input, select, textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.35); }
+  input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+  select { appearance: none; cursor: pointer; }
+  select option { background: var(--navy); }
+  textarea { resize: vertical; min-height: 90px; }
+  .submit-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 1rem;
+    border: none; cursor: pointer;
+    padding: 14px;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.15s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .wa-btn {
+    display: flex; align-items: center; gap: 12px;
+    background: #25d366;
+    color: white; text-decoration: none;
+    font-weight: 700; font-size: 0.95rem;
+    padding: 14px 22px; border-radius: 8px;
+    margin-top: 16px;
+    transition: background 0.2s;
+  }
+  .wa-btn:hover { background: #1db954; }
+  .contact-detail {
+    display: flex; align-items: flex-start; gap: 14px;
+    margin-bottom: 22px;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.92rem; line-height: 1.6;
+  }
+  .contact-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+
+  /* ── REVIEWS ── */
+  #reviews { background: var(--cream); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 28px; }
+  .review-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px;
+  }
+  .stars { color: #f5a623; font-size: 1rem; margin-bottom: 10px; }
+  .review-text { font-size: 0.9rem; color: #444; line-height: 1.65; margin-bottom: 14px; font-style: italic; }
+  .review-author { font-weight: 700; font-size: 0.85rem; color: var(--navy); }
+  .review-program { font-size: 0.78rem; color: var(--text-muted); }
+  .reviews-cta { text-align: center; }
+  .google-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: white; border: 1.5px solid var(--border);
+    color: var(--navy); text-decoration: none;
+    font-weight: 600; font-size: 0.9rem;
+    padding: 12px 22px; border-radius: 8px;
+    transition: box-shadow 0.2s;
+  }
+  .google-btn:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+
+  /* ── LOCATION ── */
+  #location { background: var(--white); }
+  .location-flex { display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start; }
+  .location-info { flex: 1; min-width: 260px; }
+  .location-map { flex: 1.4; min-width: 280px; }
+  .map-embed {
+    width: 100%; height: 300px; border-radius: 14px;
+    border: 1px solid var(--border); overflow: hidden;
+  }
+  .map-embed iframe { width: 100%; height: 100%; border: 0; }
+  .addr-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px; margin-bottom: 20px;
+  }
+  .addr-card p { font-size: 0.93rem; color: var(--text-muted); line-height: 1.7; }
+  .phone-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--navy); text-decoration: none; font-weight: 700; font-size: 1.1rem;
+    margin-top: 8px;
+  }
+  .phone-link:hover { color: var(--gold); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060f1e;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 28px 5%;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── MOBILE NAV ── */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 22px; height: 2px; background: white; border-radius: 2px; transition: 0.2s; }
+
+  @media (max-width: 700px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: var(--navy); padding: 20px 5%; gap: 16px; }
+    .nav-links.open { display: flex; }
+    .hero-stats { flex-wrap: wrap; }
+    .stat-item { min-width: 45%; }
+    .faculty-card { flex-direction: column; }
+    .result-big { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#hero">NK Education Academy</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#schedule">Timings</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#enquiry" class="nav-cta">Enquire Now</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">📍 Ajit Singh Nagar, Vijayawada</div>
+    <h1>Expert Coaching for <span>Real Results</span></h1>
+    <p class="hero-sub">Personalised coaching for ECET, GATE, ECE & EEE subjects, and Physics (IIT-JEE, NEET, EAPCET) — for Diploma, B.Tech, and Intermediate students.</p>
+    <div class="hero-tags">
+      <span class="tag">ECET / GATE</span>
+      <span class="tag">ECE & EEE Subjects</span>
+      <span class="tag">IIT-JEE Physics</span>
+      <span class="tag">NEET Physics</span>
+      <span class="tag">EAPCET</span>
+      <span class="tag">IEEE Projects</span>
+      <span class="tag">Govt Job Prep</span>
+    </div>
+    <div class="hero-buttons">
+      <a href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy%2C%20I%20want%20to%20enquire%20about%20coaching" class="btn-primary" target="_blank">📲 WhatsApp Enquiry</a>
+      <a href="tel:+918297040335" class="btn-secondary">📞 Call Now</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">ECET 2025 Top 1000 Ranks</span></div>
+    <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Pass Result 2025</span></div>
+    <div class="stat-item"><span class="stat-num">12+</span><span class="stat-label">Subjects Taught</span></div>
+    <div class="stat-item"><span class="stat-num">⭐ 5.0</span><span class="stat-label">Google Rating</span></div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <p class="section-label">What We Offer</p>
+  <h2>Our Coaching Programs</h2>
+  <p class="section-intro">Focused, concept-based coaching for engineering and medical entrance exams, plus semester support for working students.</p>
+  <div class="programs-grid">
+    <div class="program-card">
+      <div class="prog-icon">⚡</div>
+      <div class="prog-title">ECET Coaching</div>
+      <div class="prog-desc">Rank-oriented preparation for Diploma holders targeting B.Tech admission through ECET.</div>
+      <div class="prog-tags"><span class="prog-tag">ECE</span><span class="prog-tag">EEE</span><span class="prog-tag">Diploma</span></div>
+    </div>
+    <div class="program-card">
+      <div class="prog-icon">🎯</div>
+      <div class="prog-title">GATE Coaching</div>
+      <div class="prog-desc">Strategic GATE preparation for PSU jobs, M.Tech admissions, and higher studies.</div>
+      <div class="prog-tags"><span class="prog-tag">B.Tech</span><span class="prog-tag">EC</span><span class="prog-tag">EE</span></div>
+    </div>
+    <div class="program-card">
+      <div class="prog-icon">🔬</div>
+      <div class="prog-title">Physics Coaching</div>
+      <div class="prog-desc">Concept-clarity based Physics for IIT-JEE, NEET, and EAPCET aspirants.</div>
+      <div class="prog-tags"><span class="prog-tag">IIT-JEE</span><span class="prog-tag">NEET</span><span class="prog-tag">EAPCET</span></div>
+    </div>
+    <div class="program-card">
+      <div class="prog-icon">📚</div>
+      <div class="prog-title">ECE & EEE Tuitions</div>
+      <div class="prog-desc">Semester subject coaching for Diploma and B.Tech students to clear backlogs and excel.</div>
+      <div class="prog-tags"><span class="prog-tag">Semester</span><span class="prog-tag">Backlogs</span><span class="prog-tag">All Subjects</span></div>
+    </div>
+    <div class="program-card">
+      <div class="prog-icon">💡</div>
+      <div class="prog-title">Project Guidance</div>
+      <div class="prog-desc">IEEE-standard project guidance for Diploma and B.Tech final year students.</div>
+      <div class="prog-tags"><span class="prog-tag">IEEE</span><span class="prog-tag">B.Tech</span><span class="prog-tag">Diploma</span></div>
+    </div>
+    <div class="program-card">
+      <div class="prog-icon">🏛️</div>
+      <div class="prog-title">Govt Job Preparation</div>
+      <div class="prog-desc">Guidance and preparation for government job exams relevant to engineering graduates.</div>
+      <div class="prog-tags"><span class="prog-tag">Career</span><span class="prog-tag">PSU</span><span class="prog-tag">State Jobs</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <p class="section-label">Proven Track Record</p>
+  <h2>Results That Speak</h2>
+  <div class="results-flex">
+    <div class="results-left">
+      <div class="result-highlight">
+        <div class="result-big">Top 1000</div>
+        <div class="result-label">2 Students — ECET 2025</div>
+        <div class="result-note">Below Rank 1000 in Andhra Pradesh ECET</div>
+      </div>
+      <div class="result-highlight" style="background: linear-gradient(135deg,#1a3d70,#0b1f3a)">
+        <div class="result-big">100%</div>
+        <div class="result-label">Pass Result — 2025</div>
+        <div class="result-note">All enrolled students passed their semester exams</div>
+      </div>
+    </div>
+    <div class="results-right">
+      <ul class="checklist">
+        <li><span class="check">✔</span><span><strong>12+ Subjects taught</strong> in 2025 across Engineering & Diploma levels</span></li>
+        <li><span class="check">✔</span><span><strong>Concept clarity first</strong> — students understand, not just memorise</span></li>
+        <li><span class="check">✔</span><span><strong>Strong semester results</strong> — consistent improvement across batches</span></li>
+        <li><span class="check">✔</span><span><strong>Personal attention</strong> — small batches ensure every student is tracked</span></li>
+        <li><span class="check">✔</span><span><strong>Rank-oriented coaching</strong> for ECET and GATE aspirants</span></li>
+        <li><span class="check">✔</span><span><strong>Flexible timings</strong> — evening & weekend batches available</span></li>
+        <li><span class="check">✔</span><span><strong>Affordable fees</strong> — quality coaching at accessible prices</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section id="faculty">
+  <p class="section-label">Your Mentor</p>
+  <h2>Expert Faculty</h2>
+  <p class="section-intro">Learn directly from an experienced educator with deep subject expertise across ECE, EEE, and Physics domains.</p>
+  <div class="faculty-card">
+    <div class="faculty-avatar">👨‍🏫</div>
+    <div>
+      <div class="faculty-name">NK Education Academy Faculty</div>
+      <div class="faculty-title">ECE | EEE | Physics Specialist · ECET & GATE Mentor</div>
+      <div class="faculty-desc">
+        With hands-on expertise in Electronics and Electrical Engineering subjects, our faculty delivers concept-driven coaching that goes beyond rote learning. Students are mentored individually, with personalised study plans for ECET, GATE, and university semester exams. Known for making complex topics simple and results-oriented.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <p class="section-label">Part-Time Academy</p>
+  <h2>Batch Timings</h2>
+  <div class="timing-note">
+    ⏰ NK Education Academy operates in the <strong>evenings and on weekends</strong>, making it ideal for working professionals, college students, and serious exam aspirants with busy schedules.
+  </div>
+  <div class="schedule-grid">
+    <div class="sched-card">
+      <div class="sched-day">Monday – Friday</div>
+      <div class="sched-time">Evenings (Contact for exact timings)</div>
+      <div class="sched-open">● Open</div>
+    </div>
+    <div class="sched-card">
+      <div class="sched-day">Saturday</div>
+      <div class="sched-time">Morning & Evening Batches</div>
+      <div class="sched-open">● Open</div>
+    </div>
+    <div class="sched-card">
+      <div class="sched-day">Sunday</div>
+      <div class="sched-time">Special / Doubt Clearing Sessions</div>
+      <div class="sched-open">● Open</div>
+    </div>
+  </div>
+  <p style="margin-top:20px; font-size:0.88rem; color:var(--text-muted);">📲 WhatsApp us to confirm current batch timings and seat availability for your preferred program.</p>
+</section>
+
+<!-- ENQUIRY -->
+<section id="enquiry">
+  <p class="section-label">Get In Touch</p>
+  <h2>Enquire About Admission</h2>
+  <p class="section-intro">Fill in the form below and we'll get back to you — or reach out directly via WhatsApp for a faster response.</p>
+  <div class="enquiry-wrap">
+    <div class="enquiry-form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="e.g. Ravi Kumar" id="fname">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="e.g. 9876543210" id="fphone">
+      </div>
+      <div class="form-group">
+        <label>Program Interested In</label>
+        <select id="fprog">
+          <option value="">Select a program...</option>
+          <option>ECET Coaching</option>
+          <option>GATE Coaching</option>
+          <option>Physics – IIT-JEE / NEET / EAPCET</option>
+          <option>ECE / EEE Semester Tuitions</option>
+          <option>IEEE Project Guidance</option>
+          <option>Government Job Preparation</option>
+          <option>Other / Multiple Programs</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message (Optional)</label>
+        <textarea placeholder="Any specific subjects, exam date, or queries..." id="fmsg"></textarea>
+      </div>
+      <button class="submit-btn" onclick="sendWhatsApp()">
+        📲 Send via WhatsApp
+      </button>
+    </div>
+    <div class="enquiry-info">
+      <div class="contact-detail">
+        <span class="contact-icon">📞</span>
+        <div>
+          <div style="font-weight:700;color:white;margin-bottom:4px">Call / WhatsApp</div>
+          <a href="tel:+918297040335" style="color:var(--gold-light);text-decoration:none;font-size:1.1rem;font-weight:700;">+91 82970 40335</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-icon">📍</span>
+        <div>
+          <div style="font-weight:700;color:white;margin-bottom:4px">Location</div>
+          Pent-House (Upstairs), GSIT Computer Building,<br>
+          Near Flyover, Ajit Singh Nagar,<br>
+          PNT Colony, Vijayawada
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-icon">🕐</span>
+        <div>
+          <div style="font-weight:700;color:white;margin-bottom:4px">Batch Timings</div>
+          Evening batches (Mon–Fri)<br>
+          Weekend batches available
+        </div>
+      </div>
+      <a href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy%2C%20I%20want%20to%20enquire%20about%20coaching" class="wa-btn" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="white"><path d="M16 2C8.27 2 2 8.27 2 16c0 2.47.67 4.87 1.93 6.99L2 30l7.18-1.88A13.94 13.94 0 0016 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5c-2.32 0-4.56-.63-6.5-1.82l-.46-.28-4.26 1.12 1.14-4.17-.3-.48A11.45 11.45 0 014.5 16C4.5 9.61 9.61 4.5 16 4.5S27.5 9.61 27.5 16 22.39 27.5 16 27.5zm6.29-8.55c-.34-.17-2.02-1-2.34-1.11-.32-.12-.55-.17-.78.17-.23.34-.9 1.11-1.1 1.34-.2.23-.41.26-.75.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.01-1.9-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.39.51-.59.17-.2.23-.34.34-.57.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59-.2-.01-.43-.01-.66-.01s-.6.09-.92.43c-.32.34-1.2 1.17-1.2 2.86 0 1.69 1.23 3.33 1.4 3.56.17.23 2.42 3.69 5.86 5.17.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.82 2.31-1.62.29-.79.29-1.47.2-1.61-.09-.15-.32-.23-.66-.4z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <p class="section-label">Student Feedback</p>
+  <h2>What Students Say</h2>
+  <p class="section-intro">Rated highly on Google for concept clarity, personal attention, and exam results.</p>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"The way concepts were explained made everything clear. I cleared my semester exams with confidence. Highly recommended for ECE students."</div>
+      <div class="review-author">Engineering Student</div>
+      <div class="review-program">ECE Semester Coaching</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"Got below 1000 rank in ECET 2025! The focused preparation and personal attention made the difference. Thank you sir!"</div>
+      <div class="review-author">ECET Aspirant</div>
+      <div class="review-program">ECET Coaching · 2025</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"Physics was always my weak point. After joining NK Academy, I started scoring well in NEET mock tests. Great teaching style."</div>
+      <div class="review-author">NEET Aspirant</div>
+      <div class="review-program">Physics Coaching</div>
+    </div>
+  </div>
+  <div class="reviews-cta">
+    <a href="https://www.google.com/search?q=NK+Education+Academy+-+ECE+EEE+Tuitions+-+ECET+GATE+Coaching+-+NEET/IIT+Physics" target="_blank" class="google-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      View All Google Reviews
+    </a>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <p class="section-label">Find Us</p>
+  <h2>Our Location</h2>
+  <div class="location-flex">
+    <div class="location-info">
+      <div class="addr-card">
+        <p>
+          <strong>NK Education Academy</strong><br><br>
+          Pent-House (Upstairs),<br>
+          GSIT Computer Building,<br>
+          Near Flyover, Ajit Singh Nagar,<br>
+          PNT Colony, Vijayawada<br>
+          Andhra Pradesh
+        </p>
+        <a href="tel:+918297040335" class="phone-link">📞 +91 82970 40335</a>
+      </div>
+      <a href="https://wa.me/918297040335?text=Hello%2C%20I%20need%20directions%20to%20NK%20Education%20Academy" class="btn-primary" target="_blank" style="display:inline-flex;text-decoration:none;">
+        📲 Get Directions via WhatsApp
+      </a>
+    </div>
+    <div class="location-map">
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.5!2d80.6417!3d16.5155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDMwJzU2LjAiTiA4MMKwMzgnMzAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:8px;">NK Education Academy</div>
+  <div>ECET · GATE · ECE & EEE · Physics (IIT-JEE, NEET, EAPCET) · IEEE Projects · Govt Job Prep</div>
+  <div style="margin-top:8px;">PNT Colony, Vijayawada · <a href="tel:+918297040335">+91 82970 40335</a> · <a href="https://wa.me/918297040335" target="_blank">WhatsApp</a></div>
+  <div style="margin-top:12px;font-size:0.76rem;opacity:0.5;">© 2025 NK Education Academy. All rights reserved.</div>
+</footer>
+
+<script>
+function sendWhatsApp() {
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  const prog = document.getElementById('fprog').value;
+  const msg = document.getElementById('fmsg').value.trim();
+
+  if (!name || !phone || !prog) {
+    alert('Please fill in Name, Phone, and Program before sending.');
+    return;
+  }
+
+  const text = `Hello NK Education Academy!%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AProgram: ${encodeURIComponent(prog)}${msg ? '%0AMessage: ' + encodeURIComponent(msg) : ''}%0A%0APlease share details about admission.`;
+  window.open(`https://wa.me/918297040335?text=${text}`, '_blank');
+}
+</script>
+</body>
+</html>
