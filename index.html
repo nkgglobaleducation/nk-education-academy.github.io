@@ -1,71 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NK Education Academy</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4fff4;
-    color: #222;
+    font-family: Arial;
+    margin:0;
+    background:#f5fff5;
+    text-align:center;
 }
 
-header {
-    background: linear-gradient(to right, #0a5c2f, #2ecc71);
-    color: white;
-    padding: 30px 15px;
-    text-align: center;
+.hero {
+    background: linear-gradient(#0a5c2f,#2ecc71);
+    color:white;
+    padding:20px;
 }
 
-header h1 {
-    font-size: 40px;
-    margin: 0;
+.hero h1 {
+    font-size:38px;
 }
 
-header p {
-    font-size: 18px;
+.poster {
+    width:95%;
+    margin:15px auto;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
 }
 
-section {
-    padding: 20px;
-    margin: 10px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h2 {
-    color: #0a5c2f;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-.highlight {
-    background: #eaffea;
-    padding: 10px;
-    border-left: 5px solid green;
+.section {
+    background:white;
+    margin:15px;
+    padding:15px;
+    border-radius:10px;
 }
 
 .btn {
-    display: inline-block;
-    background: #25D366;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    background:#25D366;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    margin-top:10px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #0a5c2f;
-    color: white;
+input {
+    padding:10px;
+    width:90%;
+    margin:5px;
 }
 </style>
 
@@ -73,85 +58,60 @@ footer {
 
 <body>
 
-<header>
-    <h1>NK EDUCATION ACADEMY</h1>
-    <p>E-CET | GATE | ECE & EEE Tuitions | Physics (IIT-JEE | NEET | EAPCET)</p>
-    <p>Diploma | B Tech – B.E | Intermediate (1st & 2nd Year)</p>
-</header>
+<div class="hero">
+<h1>NK EDUCATION ACADEMY</h1>
+<p>E-CET | GATE | ECE & EEE | IIT-JEE | NEET | EAPCET</p>
 
-<section class="highlight">
-    <h2>Our Strength</h2>
-    <p>Concept-Based Teaching | Numerical Practice | Exam-Oriented Preparation</p>
-    <p><strong>Flexible Batches & Individual Training</strong></p>
-</section>
+<a class="btn" href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy">WhatsApp Now</a>
+</div>
 
-<section>
-    <h2>Engineering Coaching (ECE & EEE)</h2>
-    <ul>
-        <li>E-CET Preparation</li>
-        <li>GATE Coaching</li>
-        <li>Semester Subjects (Diploma / B.Tech / B.E)</li>
-        <li>All Core Subjects Covered</li>
-    </ul>
-</section>
+<!-- YOUR POSTER -->
+<img src="poster.png" class="poster">
 
-<section>
-    <h2>Project Guidance</h2>
-    <ul>
-        <li>For Diploma & B.Tech – B.E Students</li>
-        <li>IEEE Standard Guidance</li>
-        <li>Topic Selection</li>
-        <li>Design, Simulation & Implementation</li>
-        <li>Report Writing & Viva Preparation</li>
-    </ul>
-</section>
+<!-- ENQUIRY FORM -->
+<div class="section">
+<h2>Quick Enquiry</h2>
 
-<section>
-    <h2>Physics Coaching</h2>
-    <ul>
-        <li>IIT-JEE Physics</li>
-        <li>NEET Physics</li>
-        <li>EAPCET Physics</li>
-        <li>Intermediate Physics (1st & 2nd Year)</li>
-    </ul>
-</section>
+<input id="name" placeholder="Student Name"><br>
+<input id="course" placeholder="Course"><br>
+<input id="subject" placeholder="Subject"><br>
 
-<section>
-    <h2>Government Job Preparation & Career Guidance</h2>
-    <ul>
-        <li>Latest Govt Job Updates</li>
-        <li>Exam Guidance</li>
-        <li>Syllabus & Pattern</li>
-        <li>Preparation Strategy</li>
-        <li>Study Plan & Resources</li>
-        <li>SSC | PSU | Railways | State Exams</li>
-    </ul>
-</section>
+<button onclick="sendMsg()">Send</button>
 
-<section class="highlight">
-    <h2>Facilities</h2>
-    <p>Online & Offline Classes Available</p>
-    <p>Best Preparation for Exams & Ranks</p>
-    <p>100% Pass in Tuition Taken Subjects</p>
-</section>
+<script>
+function sendMsg(){
+let name = document.getElementById("name").value;
+let course = document.getElementById("course").value;
+let subject = document.getElementById("subject").value;
 
-<section>
-    <h2>Contact Us</h2>
-    <p><strong>📍 Address:</strong><br>
-    Pent-House (Upstairs), GSIT Computer Building,<br>
-    near Flyover, Ajit Singh Nagar,<br>
-    PNT Colony, Vijayawada – 520015</p>
+let url = "https://wa.me/918297040335?text="
++ "Hello NK Education Academy,%0A"
++ "Name: "+name+"%0A"
++ "Course: "+course+"%0A"
++ "Subject: "+subject;
 
-    <p><strong>📞 Call / WhatsApp:</strong> 8297040335</p>
+window.open(url,'_blank');
+}
+</script>
+</div>
 
-    <a class="btn" href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy.%20I%20want%20tuition%20details." target="_blank">
-        Enquire on WhatsApp
-    </a>
-</section>
+<!-- CONTACT -->
+<div class="section">
+<h2>Contact</h2>
 
-<footer>
-    <p>© 2026 NK Education Academy | Your Success Starts Here</p>
-</footer>
+<p>Pent-House (Upstairs), GSIT Computer Building,<br>
+Ajit Singh Nagar, Vijayawada</p>
+
+<p><b>Call / WhatsApp: 8297040335</b></p>
+
+</div>
+
+<!-- FLOATING BUTTON -->
+<a href="https://wa.me/918297040335"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
+padding:15px;border-radius:50%;text-decoration:none;">
+📲
+</a>
 
 </body>
 </html>
