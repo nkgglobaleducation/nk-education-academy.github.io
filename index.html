@@ -5,35 +5,93 @@
 <title>NK Education Academy</title>
 
 <style>
-body{margin:0;font-family:sans-serif;background:#f4fff4}
+body{
+margin:0;
+font-family:Segoe UI;
+background:linear-gradient(to bottom,#f5fff5,#eaffea);
+}
 
 /* NAV */
-.nav{display:flex;justify-content:space-between;padding:15px;background:#fff;box-shadow:0 2px 8px #ccc}
+.nav{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:#fff;
+box-shadow:0 2px 8px #ccc;
+}
+
 .nav h2{color:#0a5c2f;margin:0}
 
 /* HERO */
 .hero{
 background:linear-gradient(135deg,#0a5c2f,#2ecc71);
-color:white;text-align:center;padding:50px 20px}
-.hero h1{font-size:42px;margin:0}
+color:white;
+text-align:center;
+padding:50px 20px;
+}
+
+.hero h1{font-size:44px;margin:0}
 
 /* BUTTON */
 .btn{
-background:#25D366;color:white;padding:12px 20px;
-border-radius:5px;text-decoration:none;display:inline-block;margin-top:10px}
+background:#25D366;
+color:white;
+padding:12px 20px;
+border-radius:5px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
 
 /* SECTION */
-.section{padding:25px;background:white;margin:15px;border-radius:10px}
+.section{
+margin:20px;
+padding:20px;
+background:white;
+border-radius:12px;
+box-shadow:0 3px 12px rgba(0,0,0,0.1);
+}
 
 /* GRID */
-.grid{display:grid;gap:15px}
-.card{background:#eaffea;padding:15px;border-radius:10px}
+.grid{
+display:grid;
+gap:15px;
+}
+
+.card{
+background:#f0fff0;
+padding:15px;
+border-radius:10px;
+}
+
+/* RESULTS */
+.result-box{
+background:#e6ffe6;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+background:#f9fff9;
+padding:15px;
+border-radius:10px;
+margin-top:10px;
+}
 
 /* FLOAT */
 .float{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;padding:15px;border-radius:50%}
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+}
 
+/* RESPONSIVE */
 @media(min-width:700px){
 .grid{grid-template-columns:1fr 1fr}
 }
@@ -46,6 +104,7 @@ background:#25D366;color:white;padding:15px;border-radius:50%}
 <h2>NK Academy</h2>
 </div>
 
+<!-- HERO -->
 <div class="hero">
 <h1>NK EDUCATION ACADEMY</h1>
 
@@ -54,22 +113,12 @@ background:#25D366;color:white;padding:15px;border-radius:50%}
 
 <p>Diploma | B.Tech – B.E | Intermediate</p>
 
-<p style="background:#fff;color:#0a5c2f;padding:10px;border-radius:6px;">
-🔥 E-CET 2025 Results: <b>2 Students Below 1000 Rank</b>
-</p>
-
-<a class="btn"
-href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy.%20I%20need%20details">
+<a class="btn" href="https://wa.me/918297040335">
 📲 Enquire Now
 </a>
 </div>
 
-<div class="section">
-<h2>Our Strength</h2>
-<p>Concept-Based Teaching | Numerical Practice | Exam-Oriented Preparation</p>
-<p><b>Flexible Batches & Individual Training</b></p>
-</div>
-
+<!-- PROGRAMS -->
 <div class="section">
 <h2>Programs</h2>
 
@@ -78,13 +127,12 @@ href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy.%20I%20ne
 <div class="card">
 <h3>Engineering Coaching</h3>
 <p>E-CET | GATE</p>
-<p>ECE & EEE Subjects</p>
+<p>All ECE & EEE Subjects</p>
 </div>
 
 <div class="card">
 <h3>Project Guidance</h3>
-<p>Diploma & B.Tech Projects</p>
-<p>IEEE + Viva Support</p>
+<p>IEEE Projects + Viva</p>
 </div>
 
 <div class="card">
@@ -94,22 +142,70 @@ href="https://wa.me/918297040335?text=Hello%20NK%20Education%20Academy.%20I%20ne
 
 <div class="card">
 <h3>Govt Jobs</h3>
-<p>Preparation & Career Guidance</p>
 <p>SSC | PSU | Railways</p>
 </div>
 
 </div>
 </div>
 
+<!-- RESULTS SECTION -->
+<div class="section">
+<h2>Our Results</h2>
+
+<div class="grid">
+
+<div class="result-box">
+<h3>E-CET 2025</h3>
+<p><b>2 Students Below 1000 Rank</b></p>
+</div>
+
+<div class="result-box">
+<h3>Diploma & B.Tech</h3>
+<p><b>12 Subjects Taught</b></p>
+<p>✅ 100% Pass Result</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section">
+<h2>Student Reviews</h2>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐  
+"Excellent teaching. Concepts very clear. Helped me pass tough subjects."
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐  
+"Best coaching for ECE & EEE. Individual attention is very helpful."
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐  
+"Good support for exams and projects."
+</div>
+
+<p>
+👉 <a href="https://www.google.com/search?q=nk+education+academy" target="_blank">
+View More Reviews on Google
+</a>
+</p>
+
+</div>
+
+<!-- ENQUIRY -->
 <div class="section">
 <h2>Quick Enquiry</h2>
 
 <form onsubmit="sendMsg();return false;">
-<input id="name" placeholder="Student Name"><br><br>
+<input id="name" placeholder="Name"><br><br>
 <input id="course" placeholder="Course"><br><br>
 <input id="subject" placeholder="Subject"><br><br>
 
-<button class="btn">Send Enquiry</button>
+<button class="btn">Send</button>
 </form>
 
 <script>
@@ -130,6 +226,7 @@ window.open(url,'_blank');
 
 </div>
 
+<!-- CONTACT -->
 <div class="section">
 <h2>Contact</h2>
 
@@ -143,6 +240,7 @@ Vijayawada – 520015
 
 </div>
 
+<!-- FLOAT -->
 <a href="https://wa.me/918297040335" class="float">📲</a>
 
 </body>
