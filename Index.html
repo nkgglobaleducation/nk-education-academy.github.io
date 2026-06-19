@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <base target="_top">
+
+  <?!= include('Style'); ?>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+AI Portfolio Manager
+</h1>
+
+<h3>
+Portfolio 1 CSV
+</h3>
+
+<input
+type="file"
+id="portfolio1"
+accept=".csv">
+
+<br><br>
+
+<h3>
+Portfolio 2 CSV
+</h3>
+
+<input
+type="file"
+id="portfolio2"
+accept=".csv">
+
+<br><br>
+
+<h3>
+Screener Stocks
+</h3>
+
+<textarea
+id="screener"
+rows="15"
+style="width:100%;"
+></textarea>
+
+<br><br>
+
+<button
+onclick="analyzePortfolio()">
+
+Analyze Portfolio
+
+</button>
+
+<button
+onclick="analyzeDatabase()">
+
+Analyze Existing Database
+
+</button>
+
+<div
+id="result"
+style="
+margin-top:20px;
+">
+</div>
+
+</div>
+
+<?!= include('JavaScript'); ?>
+
+</body>
+</html>
